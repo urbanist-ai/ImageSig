@@ -1,6 +1,6 @@
 matplotlib==3.3.3
-#esig==0.9.7
-#iisignature==0.24
+esig==0.9.7
+iisignature==0.24
 numpy==1.19.3
 streamlit==1.1.0
 #tensorflow_gpu==2.1.0
