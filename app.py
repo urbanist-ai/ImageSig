@@ -16,7 +16,7 @@ import time
 import numpy as np
 
 
-def imagesig (im,depth,type="RGB):
+def imagesig (im,depth,type="RGB"):
     
     signatures = []
     
