@@ -83,7 +83,7 @@ def imagesig_predict_quant (image_path ,depth=4,
 
 
 
-    return im_signature_array
+    return im_signature_array.astype("float32")
 
 
 
