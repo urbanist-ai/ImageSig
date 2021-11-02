@@ -1,4 +1,3 @@
---upgrade pip
 matplotlib==3.3.3
 esig==0.9.7
 iisignature==0.24
