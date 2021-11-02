@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Nov  2 21:49:19 2021
+Created on Tue Nov  2 23:18:24 2021
 
+@author: Ibrahim
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov  2 21:49:19 2021
 @author: Ibrahim
 """
 
@@ -63,7 +69,7 @@ def imagesig_predict_quant (image_path ,depth=4,
     image_sample = image
     image = image.astype("float32")/ 255.
     sig = imagesig(image,depth)
-    im_signature = sig.numpy()
+    im_signature = sig
     im_signature_array = np.reshape(im_signature,(1,image_size[0],-1))
 
     if two_direction == True:
@@ -72,7 +78,6 @@ def imagesig_predict_quant (image_path ,depth=4,
         result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
         
         sig2 = sig = imagesig(result,depth)
-        sig2 = sig2.numpy()
         x = np.concatenate((im_signature,sig2), axis=0)
         im_signature_array = np.reshape(x,(1,x.shape[0],-1))
 
@@ -136,4 +141,3 @@ if uploaded_file is not None:
             col1, col2 = st.columns(2)
             col1.metric("PREDICTION", pred, delta=None, delta_color='normal')
             col2.metric("FPS", fps, delta=diff_fps, delta_color='normal')
-
