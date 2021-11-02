@@ -6,7 +6,7 @@ Created on Tue Nov  2 21:49:19 2021
 """
 
 import streamlit as st
-
+import iisignature 
 
 import tensorflow as tf
 import time 
@@ -14,11 +14,22 @@ import numpy as np
 import cv2,io
 import time
 import numpy as np
-import torch
-import signatory
 
 
-
+def imagesig (im,depth,type="RGB):
+    
+    signatures = []
+    
+    for stream in im:
+        #print(stream.shape)
+        stream = stream.astype("float32") / 255.
+        if type=="GRAY":
+            stream = np.reshape(stream,(stream.shape[0],1))
+        sig =  iisignature.sig(stream, depth)# compute the signature
+        #sig = esig.path2sig(stream, depth)
+        signatures.append(sig)
+    signatures = np.array(signatures)
+    return(signatures)
 
 
 def classifier_quant(path, classes_names,image_frame):
@@ -51,8 +62,7 @@ def imagesig_predict_quant (image_path ,depth=4,
     image = cv2.resize(image,image_size, interpolation = cv2.INTER_AREA)
     image_sample = image
     image = image.astype("float32")/ 255.
-    im_torch = torch.from_numpy(image)
-    sig = signatory.signature(im_torch, depth)
+    sig = imagesig(image,depth)
     im_signature = sig.numpy()
     im_signature_array = np.reshape(im_signature,(1,image_size[0],-1))
 
@@ -60,9 +70,8 @@ def imagesig_predict_quant (image_path ,depth=4,
         image_center = tuple(np.array(image.shape[1::-1]) / 2)
         rot_mat = cv2.getRotationMatrix2D(image_center, 90, 1.0)
         result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
-        im_col_torch = torch.from_numpy(result)
         
-        sig2 = signatory.signature(im_col_torch, depth)
+        sig2 = sig = imagesig(result,depth)
         sig2 = sig2.numpy()
         x = np.concatenate((im_signature,sig2), axis=0)
         im_signature_array = np.reshape(x,(1,x.shape[0],-1))
