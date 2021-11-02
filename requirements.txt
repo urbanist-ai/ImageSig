@@ -9,7 +9,7 @@ focal_loss==0.0.7
 opencv_python
 matplotlib==3.3.3
 esig==0.9.7
-iisignature==0.24
+iisignature
 ipython==7.29.0
 keras_flops==0.1.2
 scikit_learn==1.0.1
