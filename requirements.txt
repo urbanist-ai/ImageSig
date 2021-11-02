@@ -10,7 +10,7 @@ tensorflow_addons==0.12.0
 #focal_loss==0.0.7
 scikit_image==0.17.1
 torch==1.9.0+cu102
-~pencv_python==4.5.1.48
+opencv_python==4.5.1.48
 pandas==1.1.5
 signatory==1.2.6.1.9.0
 ipython==7.29.0
