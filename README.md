@@ -65,7 +65,8 @@ test_imagesig = image_signature (
 
 ```
 
-train the model:
+To train the model on the downloaded dataset or your dataset:
+
 Make sure that all categories are included in the structure as follows:
 TRAIN_DIR = "data/training_set"
 TEST_DIR = "data/test_set"
