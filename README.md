@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
 Download dataset:
 
-The demo needs Celeba dataset. 
+The demo needs Celeba dataset or Crack detection dataset as presented in the paper.
 
 Key hyperparameters for using ImageSig with image array:
 ```python
