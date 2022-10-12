@@ -77,6 +77,17 @@ TEST_DIR = "data/test_set"
 python train_imagesig.py
 ```
 
-##Acknowledgement
+#Acknowledgement
 
 If you use this code, please cite the following article:
+
+'''
+@InProceedings{Ibrahim_2022_CVPR,
+    author    = {Ibrahim, Mohamed R. and Lyons, Terry},
+    title     = {ImageSig: A Signature Transform for Ultra-Lightweight Image Recognition},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2022},
+    pages     = {3649-3659}
+}
+'''
