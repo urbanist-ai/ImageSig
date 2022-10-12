@@ -64,3 +64,12 @@ test_imagesig = image_signature (
                             )
 
 ```
+
+train the model:
+Make sure that all categories are included in the structure as follows:
+TRAIN_DIR = "data/training_set"
+TEST_DIR = "data/test_set"
+
+```python
+python train_imagesig.py
+```
