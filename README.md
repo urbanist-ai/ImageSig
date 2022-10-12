@@ -3,6 +3,9 @@
 This is the official implementation of ImageSig (CVPR 2022- Embedded vision)
 https://openaccess.thecvf.com/content/CVPR2022W/EVW/papers/Ibrahim_ImageSig_A_Signature_Transform_for_Ultra-Lightweight_Image_Recognition_CVPRW_2022_paper.pdf
 
+
+
+
 Install requirements:
 ```python
 pip install -r requirements.txt
@@ -76,12 +79,10 @@ TEST_DIR = "data/test_set"
 ```python
 python train_imagesig.py
 ```
-
-#Acknowledgement
+## Citation
 
 If you use this code, please cite the following article:
-
-'''
+```bibtex
 @InProceedings{Ibrahim_2022_CVPR,
     author    = {Ibrahim, Mohamed R. and Lyons, Terry},
     title     = {ImageSig: A Signature Transform for Ultra-Lightweight Image Recognition},
@@ -90,4 +91,4 @@ If you use this code, please cite the following article:
     year      = {2022},
     pages     = {3649-3659}
 }
-'''
+```
