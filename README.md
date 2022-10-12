@@ -1,4 +1,5 @@
 # ImageSig
+## A signature transform for lightweight image recognition
 
 This is the official implementation of ImageSig (CVPR 2022- Embedded vision)
 https://openaccess.thecvf.com/content/CVPR2022W/EVW/papers/Ibrahim_ImageSig_A_Signature_Transform_for_Ultra-Lightweight_Image_Recognition_CVPRW_2022_paper.pdf
