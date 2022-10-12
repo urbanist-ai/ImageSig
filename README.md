@@ -78,9 +78,12 @@ test_imagesig = image_signature (
 To train the model on the downloaded dataset or your dataset:
 
 Make sure that all categories are included in the structure as follows:
+```python
 TRAIN_DIR = "data/training_set"
 TEST_DIR = "data/test_set"
+```
 
+Run: 
 ```python
 python train_imagesig.py
 ```
