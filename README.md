@@ -1,4 +1,4 @@
-# ImageSig  (TF/Keras version)
+# ImageSig  (TF version)
 ## A signature transform for lightweight image recognition
 
 This is the official implementation of ImageSig (CVPR 2022- Embedded vision)
